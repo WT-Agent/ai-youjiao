@@ -346,7 +346,7 @@ const metricsList = [
   { key: 'funEngagement', label: '趣味吸引度 (Fun)' }
 ];
 
-const aiScores = ref<{ developmentMatch: number; parentChildInteraction: number; sensoryIntegration: number; habitFormation: number; funEngagement: number; } | null>(null);
+const aiScores = ref<Record<string, number> | null>(null);
 
 const styleOptions = [
   { label: '蒙台梭利感官探索与自理流 (教具感官操作/自主纠错/精细动作/自理培养)', value: '蒙台梭利感官探索与自理流' },
@@ -364,7 +364,7 @@ interface HistoryItem {
   destination: string;
   input: string;
   styleLabel: string;
-  aiScores: { developmentMatch: number; parentChildInteraction: number; sensoryIntegration: number; habitFormation: number; funEngagement: number; } | null;
+  aiScores: Record<string, number> | null;
   output: string;
 }
 
